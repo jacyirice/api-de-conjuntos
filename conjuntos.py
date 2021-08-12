@@ -1,0 +1,2 @@
+class Conjunto:
+    pass
