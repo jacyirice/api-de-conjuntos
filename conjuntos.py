@@ -10,5 +10,6 @@ class Conjunto:
     def tamanho(self):
         return len(self.elementos)
     
-    
+    def possui(self, e):
+        return e in self.elementos
     
