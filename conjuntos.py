@@ -7,4 +7,8 @@ class Conjunto:
         else:
             self.elementos = args
             
+    def tamanho(self):
+        return len(self.elementos)
+    
+    
     
