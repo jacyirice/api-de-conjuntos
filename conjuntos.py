@@ -1,3 +1,5 @@
+# Alunos: Jacyiricê e Rayanna
+
 class Conjunto:
     def __init__(self, *args):
         if type(args[0]) == list:
