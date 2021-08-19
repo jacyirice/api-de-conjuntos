@@ -14,10 +14,7 @@ class Conjunto:
         return e in self.elementos
     
     def contem(self, b):
-        flag = True
         for i in b.elementos:
             if i not in self.elementos:
-                flag = False
-                break
-            
-        return flag 
+                return False
+        return True
