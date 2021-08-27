@@ -73,6 +73,32 @@ class ConjuntoTest(unittest.TestCase):
     def test_nao_eh_vazio(self):
         A = Conjunto(1, 2, 3)
         self.assertFalse(A.eh_vazio())
-        
+
+    # uniao
+    def test_uniao(self):
+        A = Conjunto(1, 2)
+        B = Conjunto(1, 2, 3)
+        C = Conjunto(1, 2, 3)
+        self.assertEqual(A.uniao(B).elementos, C.elementos)
+
+    def test_nao_uniao(self):
+        A = Conjunto(1, 2)
+        B = Conjunto(1, 2, 3)
+        C = Conjunto(1, 2, 3, 4)
+        self.assertNotEqual(A.uniao(B).elementos, C.elementos)
+
+    def test_intersecçao(self):
+        A = Conjunto(1, 2)
+        B = Conjunto(2, 3, 4)
+        C = A.intersecao(B)
+        self.assertEqual(C.elementos, Conjunto(2).elementos)
+
+    def test_diferenca(self):
+        A = Conjunto(1, 2, 3)
+        B = Conjunto(1, 4)
+        C = A.diferenca(B)
+        self.assertEqual(C.elementos, Conjunto(2, 3).elementos)
+
+
 if __name__ == '__main__':
     unittest.main()

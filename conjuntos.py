@@ -8,7 +8,9 @@ class Conjunto:
             self.elementos = args[0].elementos
         else:
             self.elementos = args
-
+            
+        self.elementos = sorted(self.elementos, key=lambda x: str(x))
+        
     def tamanho(self):
         return len(self.elementos)
 
@@ -34,3 +36,24 @@ class Conjunto:
     def eh_vazio(self):
         return self.tamanho() == 0
 
+    def uniao(self,b):
+        aux = []
+        for i in b.elementos:
+            if i not in self.elementos:
+                aux.append(i)
+        aux.extend(self.elementos)
+        return Conjunto(aux)
+    
+    def intersecao(self,b):
+        aux = []
+        for i in b.elementos:
+            if i in self.elementos:
+                aux.append(i)
+        return Conjunto(aux)
+    
+    def diferenca(self,b):
+        aux = []
+        for i in self.elementos:
+            if i not in b.elementos:
+                aux.append(i)
+        return Conjunto(aux)
