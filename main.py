@@ -1,9 +1,9 @@
+# Alunos: Jacyiricê, Rayanna e Samuel
 '''
-Considere os conjuntos:   e o conjunto universo U que é definido pela união 
-dentre os demais conjuntos, ou seja, .
-Utilizando a API de Conjuntos resolva as questões a seguir:
+Considere os conjuntos: ??? e o conjunto universo U que é definido pela união 
+dentre os demais conjuntos. Utilizando a API de Conjuntos resolva as questões a seguir:
+'''
 
-'''
 from conjuntos import Conjunto
 A = Conjunto(1, 2, 3)
 B = Conjunto('a', 'b', 'c')
