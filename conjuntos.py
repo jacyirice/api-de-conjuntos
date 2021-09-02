@@ -4,8 +4,6 @@ class Conjunto:
             self.elementos = ()
         elif type(args[0]) == list:
             self.elementos = tuple(args[0])
-        elif type(args[0]) == Conjunto:
-            self.elementos = args[0].elementos
         else:
             self.elementos = args
             
@@ -57,3 +55,43 @@ class Conjunto:
             if i not in b.elementos:
                 aux.append(i)
         return Conjunto(aux)
+    
+    def complemento(self, u):
+        aux = []
+        for i in u.elementos:
+            if i not in self.elementos:
+                aux.append(i)
+        return Conjunto(aux)
+    
+    def conjunto_das_partes(self):
+        elementos = self.elementos
+        aux = [Conjunto()]
+        
+        for i in elementos:
+            aux.append(Conjunto(i))
+            
+        for i in range(len(elementos)-1):
+            for j in elementos[i+1:]:
+                aux.append(Conjunto(elementos[i], j))
+        
+        aux.append(Conjunto(elementos))
+        return Conjunto(aux)
+    
+    def produto_cartesiano(self, b):
+        aux = []
+        for i in self.elementos:
+            for j in b.elementos:
+                aux.append((i,j))
+        return Conjunto(aux)
+
+    def string(self):
+        return str(self)
+
+    def __str__(self):
+        aux = '{' 
+        for i in self.elementos:
+            aux+=f'{i}, '
+        if aux.endswith(', '):
+            aux=aux[:-2]
+        return aux+'}'
+    
