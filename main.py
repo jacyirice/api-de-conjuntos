@@ -39,9 +39,9 @@ print('Questao 4: ', R)
 # Resultado: {3, 4, 5, {1, 2, 4, 5}, {a, b, c}}
 
 # Questão 5
-R = A.intersecao(C)
+R = U.intersecao(A)
 print('Questao 5: ', R)
-# Resultado: {1, 2}
+# Resultado: {1, 2, 3}
 
 # Questão 6
 R = C.diferenca(A)
