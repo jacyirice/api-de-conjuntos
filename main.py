@@ -16,10 +16,10 @@ U = A.uniao(B)
 for i in [C, D, E]:
     U = U.uniao(i)
 print('Conjunto universo: ', U)
+# Conjunto universo:  {1, 2, 3, 4, 5, a, b, c, {1, 2, 3}, {1, 2, 4, 5}, {a, b, c}}
 
 # Questão 1
-u1 = A.uniao(B)
-R = u1.uniao(C)
+R = A.uniao(B).uniao(C)
 print('Questao 1: ', R)
 # Resultado: {1, 2, 3, 4, 5, a, b, c}
 
@@ -31,11 +31,12 @@ print('Questao 2: ', R)
 # Questão 3
 R = A.complemento(U)
 print('Questao 3: ', R)
+# Resultado: {4, 5, a, b, c, {1, 2, 3}, {1, 2, 4, 5}, {a, b, c}}
 
 # Questão 4
-r1 = B.uniao(D)
-R = r1.complemento(U)
+R = B.uniao(D).complemento(U)
 print('Questao 4: ', R)
+# Resultado: {3, 4, 5, {1, 2, 4, 5}, {a, b, c}}
 
 # Questão 5
 R = A.intersecao(C)
