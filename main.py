@@ -12,9 +12,7 @@ D = Conjunto(A, 1, 2)
 E = Conjunto(B, C)
 
 # Conjunto universo
-U = A.uniao(B)
-for i in [C, D, E]:
-    U = U.uniao(i)
+U = Conjunto.conjunto_universo(A,B,C,D,E)
 print('Conjunto universo: ', U)
 # Conjunto universo:  {1, 2, 3, 4, 5, a, b, c, {1, 2, 3}, {1, 2, 4, 5}, {a, b, c}}
 

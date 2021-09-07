@@ -24,6 +24,12 @@ class Conjunto:
 
         self.elementos = sorted(self.elementos, key=lambda x: str(x))
 
+    def conjunto_universo(*args):
+        u = Conjunto()
+        for i in args:
+            u = u.uniao(i)
+        return u
+    
     def tamanho(self):
         return len(self.elementos)
 
@@ -82,12 +88,13 @@ class Conjunto:
         elementos = self.elementos
         aux = [Conjunto()]
 
-        for i in elementos:
-            aux.append(Conjunto(i))
+        if self.tamanho() > 1:
+            for i in elementos:
+                aux.append(Conjunto(i))
 
-        for i in range(len(elementos)-1):
-            for j in elementos[i+1:]:
-                aux.append(Conjunto(elementos[i], j))
+            for i in range(len(elementos)-1):
+                for j in elementos[i+1:]:
+                    aux.append(Conjunto(elementos[i], j))
 
         aux.append(Conjunto(elementos))
         return Conjunto(aux)
