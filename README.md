@@ -14,8 +14,20 @@ print('Resultado: ', R) # Resultado: {3, 4, 5, {1, 2, 4, 5}, {a, b, c}}
 ```
 
 ## Funcionalidades
+- [x] Conjunto universo
 - [x] Tamanho
-
+- [x] Possui
+- [x] Contém
+- [x] Contém propriamente
+- [x] É igual
+- [x] É vazio
+- [x] União
+- [x] Interseção
+- [x] Diferença
+- [x] Complemento
+- [x] Conjunto das partes
+- [x] Produto cartesiano
+- [x] to_string
 
 ## Desenvolvido por
 [Jacyiricê Silva Oliveira](https://github.com/jacyirice/)
