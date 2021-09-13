@@ -235,15 +235,18 @@ class Conjunto:
         elementos = self.elementos
         aux = [Conjunto()]
 
-        if self.tamanho() > 1:
-            for i in elementos:
-                aux.append(Conjunto(i))
+        tam = self.tamanho()
+        if tam > 0:
+            aux.append(Conjunto(elementos))
+                
+            if tam > 1:
+                for i in elementos:
+                    aux.append(Conjunto(i))
 
-            for i in range(len(elementos)-1):
-                for j in elementos[i+1:]:
-                    aux.append(Conjunto(elementos[i], j))
-
-        aux.append(Conjunto(elementos))
+                if tam > 2:
+                    for i in range(len(elementos)-1):
+                        for j in elementos[i+1:]:
+                            aux.append(Conjunto(elementos[i], j))
         return Conjunto(aux)
 
     def produto_cartesiano(self, b):
@@ -278,7 +281,7 @@ class Conjunto:
         '''
         aux = '{'
         for i in self.elementos:
-            if type(i) == tuple:
+            if isinstance(i, tuple):
                 aux += to_string_tupla(i)
             else:
                 aux += f'{i}, '
