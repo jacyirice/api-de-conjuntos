@@ -25,10 +25,13 @@ class Conjunto:
         Exemplo:
         - C = Conjunto(1, 2, 3)
         '''
-        if len(args) == 0:
+        tam_args = len(args)
+        if tam_args == 0:
             self.elementos = ()
-        elif isinstance(args[0], list):
+        elif tam_args == 1 and isinstance(args[0], list):
             self.elementos = tuple(args[0])
+        elif tam_args == 1 and isinstance(args[0], Conjunto):
+            self.elementos = args[0].elementos
         else:
             self.elementos = args
 

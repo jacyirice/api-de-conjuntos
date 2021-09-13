@@ -60,13 +60,16 @@ O projeto foi desenvolvido utilizando a seguinte tecnologia
     from conjuntos import Conjunto
     
     # Conjunto vazio
-    A = Conjunto()
+    A = Conjunto() # Resultado {}
 
     # Conjunto a partir de lista
-    B = Conjunto([1, 2, 'A', '1'])
+    B = Conjunto([1, 2, 'A', '1']) # Resultado {1, 2, 'A', '1'}
+
+    # Conjunto a partir de outro conjunto
+    C = Conjunto(B) # Resultado {1, 2, 'A', '1'}
 
     # Conjunto com um ou mais elementos
-    C = Conjunto(1, 2, 'A', '1')
+    D = Conjunto(1, 2, 'A', '1') # Resultado {1, 2, 'A', '1'}
     ```
 - Relação de pertinência
 
