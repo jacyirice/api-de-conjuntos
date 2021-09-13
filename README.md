@@ -4,10 +4,10 @@
 
 - [Sobre](#-sobre)
 - [Features](#-features)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Tecnologias Utilizadas](#-%EF%B8%8F-tecnologias-utilizadas)
 - [Como baixar o projeto](#-como-baixar-o-projeto)
-- [Exemplos de Utilização](#-exemplos-de-utilizacao)
-- [Desenvolvedores](#-desenvolvido-por)
+- [Exemplos de Utilização](#exemplos-de-utilizacao)
+- [Desenvolvedores](#desenvolvido-por)
 
 ## 🔖&nbsp; Sobre
 A API de conjuntos foi desenvolvida a fim de operações relacionadas a Teoria de Conjuntos.
